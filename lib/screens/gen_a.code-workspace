@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../emotion_model_training"
+		}
+	],
+    "settings": {
+        "java.configuration.updateBuildConfiguration": "interactive"
+    }
+}

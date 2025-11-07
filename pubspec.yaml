@@ -1,0 +1,59 @@
+name: smart_bus_companion
+description: AI-powered productivity app for bus passengers
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Core
+  cupertino_icons: ^1.0.6
+  
+  # For ML Service (Hugging Face API - backup only)
+  http: ^1.2.0
+  image: ^4.1.3
+  
+  # NO DART TFLITE PACKAGES - Using native Android/iOS TensorFlow Lite instead
+  # Your model will run through platform channels
+  
+  # Camera for mood detection
+  camera: ^0.10.5
+  
+  # Audio
+  speech_to_text: ^7.0.0
+  audioplayers: ^5.2.0
+  record: ^6.1.1
+  
+  # Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+  shared_preferences: ^2.2.2
+  
+  # Sensors for posture
+  sensors_plus: ^4.0.2
+  vibration: ^3.0.0
+  permission_handler: ^11.0.1
+  
+  # Navigation & State
+  go_router: ^12.1.3
+  provider: ^6.1.1
+  file_picker: ^8.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  
+  # YOUR trained emotion detection model
+  assets:
+    - assets/models/emotion_model.tflite
+    - assets/sounds/alarm.mp3
